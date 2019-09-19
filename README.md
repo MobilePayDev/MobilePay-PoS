@@ -19,9 +19,7 @@ Call used MerchantId and LocationId must be validated as known and related in ad
 |-------------|------------|----------|-----------------------------------------------------------------|
 |MerchantId   |String      | required | The merchant identification number provided by MobilePay. |
 |LocationId   |String      | required | Location ID related to current merchant ID provided by MobilePay. |
-|PoSId   |String        | Optional | MobilePay system unique Point of Sale ID (cash register / terminal) – provided by either merchant (256 characters) or MobilePay PoS number generator (36 characters). 
-If the request contains an empty PoSId value, the response will contain current auto-generated PoS assigned ID.
-CASE SENTITIVE |
+|PoSId   |String        | Optional | MobilePay system unique Point of Sale ID (cash register / terminal) – provided by either merchant (256 characters) or MobilePay PoS number generator (36 characters). If the request contains an empty PoSId value, the response will contain current auto-generated PoS assigned ID. CASE SENTITIVE |
 |Name         |String      | required | PoS name to be shown in MobilePay App when the customer has checked-in. 
 Example: “Cash register 1” |
 
