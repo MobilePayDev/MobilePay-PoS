@@ -2,11 +2,11 @@
 Our MobilePay PoS REST api  is intended for software developers implementing MobilePay payments in a PoS system
 
 ## RegisterPoS
-#### Purpose:
+### Purpose:
 Register a new Point of Sale terminal in the MobilePay PoS system. This must be done before PoSUnit ID is associated with a PoS.
 Data validation:
 Call used MerchantId and LocationId must be validated as known and related in addition to used PoSId must be unique before registration will succeed. 
-#### Request:
+### Request:
 ```json
 {
 "MerchantId":"POSDK99999",
@@ -22,7 +22,7 @@ Call used MerchantId and LocationId must be validated as known and related in ad
 |PoSId   |String        | Optional | MobilePay system unique Point of Sale ID (cash register / terminal) – provided by either merchant (256 characters) or MobilePay PoS number generator (36 characters). If the request contains an empty PoSId value, the response will contain current auto-generated PoS assigned ID. CASE SENTITIVE |
 |Name         |String      | required | PoS name to be shown in MobilePay App when the customer has checked-in. Example: “Cash register 1” |
 
-#### Response
+### Response
 HTTP 200 – Ok
 ```json
 {
@@ -40,7 +40,7 @@ HTTP 400 – See RegisterPoS error codes
 "StatusText":"Missing or invalid parameters"
 }
 ```
-#### RegisterPoS Error Codes
+### RegisterPoS Error Codes
 |Error code   |Error text       |
 |-------------|-----------------|
 |10           |Missing or invalid parameters. | 
