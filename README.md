@@ -138,6 +138,7 @@ Assign a PoSUnit ID to current PoS (cash register / terminal) in the MobilePay P
 Data validation:
 *	Call used MerchantId , LocationId and PoSId must be validated as known and related before registration will succeed. 
 *	Assigned PoSUnitId must be validated as system unique before registration will succeed.
+
 When calling AssignPoSUnitIdToPos, the normal situation is that a new PoS unit is assigned to a cash register which previously had no assigned PoS unit. Note, however: 
 *	The method works even though the PoS unit is already assigned to another cash register
 *	The method works even though the PoS already has another assigned PoS unit
