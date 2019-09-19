@@ -1,7 +1,7 @@
-# MobilePay-Pos
+# MobilePay-PoS
 Our MobilePay PoS REST api  is intended for software developers implementing MobilePay payments in a PoS system
 
-### RegisterPoS
+## RegisterPoS
 #### Purpose:
 Register a new Point of Sale terminal in the MobilePay PoS system. This must be done before PoSUnit ID is associated with a PoS.
 Data validation:
