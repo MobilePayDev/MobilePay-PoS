@@ -1,4 +1,4 @@
-# 6	PoS Payment Methods: PoS -> MobilePay Backend
+# PoS Payment Methods: PoS -> MobilePay Backend
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 - [PoS administration](#RegisterPoS)
@@ -45,19 +45,14 @@ A PaymentStart will delete earlier finished payment entities – i.e., payment e
 |MerchantId        |String      | required | Merchant ID related to current PoS ID. |
 |LocationId        |String      | required | Location ID related to current merchant ID and PoS ID. |
 |PoSId             |String      | required | Current Point of Sale ID (cash register/terminal). |
-|OrderId           |String      | required | The OrderId is a unique id that identifies the payment. The OrderId is issued by the merchant and is attached to the payment inside MobilePay system. 
-The order ID must be unique for the merchant/location combination. This means that there should be only one completed payment with any given order ID for the same merchant and location (store) during the lifetime of the merchant/location. CASE SENTITIVE |
-|Amount            |String      | required | The amount for the payment. Always with 2 decimals and no thousand separators.
-Note: Decimal point is "." |
-|BulkRef           |String      | required | An option for grouping the payments – a text or ID. The field has a maximum length of 18 characters. If the field remains empty and the merchant does not have a Bulkpost agreement, the merchant will receive all mobile payments from any connected shops as individual postings in the reconciliation file.
-If the field remains empty and the merchant does have a Bulkpost agreement, the merchant will receive all mobile payments bulked with a default bulkref of the MP Enterprise Serialnumber value in the reconciliation file. It must be a merchant decision whether they want all individual postings or a bulk posting per store or the entire group as one posting.
+|OrderId           |String      | required | The OrderId is a unique id that identifies the payment. The OrderId is issued by the merchant and is attached to the payment inside MobilePay system. The order ID must be unique for the merchant/location combination. This means that there should be only one completed payment with any given order ID for the same merchant and location (store) during the lifetime of the merchant/location. CASE SENTITIVE |
+|Amount            |String      | required | The amount for the payment. Always with 2 decimals and no thousand separators.Note: Decimal point is "." |
+|BulkRef           |String      | required | An option for grouping the payments – a text or ID. The field has a maximum length of 18 characters. If the field remains empty and the merchant does not have a Bulkpost agreement, the merchant will receive all mobile payments from any connected shops as individual postings in the reconciliation file. If the field remains empty and the merchant does have a Bulkpost agreement, the merchant will receive all mobile payments bulked with a default bulkref of the MP Enterprise Serialnumber value in the reconciliation file. It must be a merchant decision whether they want all individual postings or a bulk posting per store or the entire group as one posting.
 The field is mandatory in the request even though it might be an empty string. |
 |Action            |String      | required | Action values:
 "Start": Initiate a payment.
 "Update": Update a current payment after recalculation. |
-|CustomerTokenCalc |String      | required | The field indicate if the loyalty payment flow must be initiated if applicable or not.
-“0”: Loyalty flow will be initiated if customer is a member of the merchant’s loyalty program.
-“1”: Ignore loyalty flow |
+|CustomerTokenCalc |String      | required | The field indicate if the loyalty payment flow must be initiated if applicable or not. “0”: Loyalty flow will be initiated if customer is a member of the merchant’s loyalty program. “1”: Ignore loyalty flow |
 |HMAC              |String      | required | The HMAC is calculated based on the other parameters. The key for the HMAC is a MerchantKey issued by MobilePay.
 Base64 (with padding) encoded HMAC SHA256:
 HMAC = Base64(hmacSha256(
