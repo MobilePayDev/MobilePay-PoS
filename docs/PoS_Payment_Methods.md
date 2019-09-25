@@ -6,10 +6,10 @@
 - [PaymentCancel](#PaymentCancel)
 - [PaymentRefund](#PaymentRefund)
 - [PoS Payment Polling Sequence](#PoS-Payment-Polling-Sequence)
-  - [PoS Payment E2E-sequence](#PoS Payment E2E-sequence)
-  - [Payment request before customer token check-in sequence](#Payment request before customer token check-in sequence)
-  - [Payment request after customer token check-in sequence](#Payment request after customer token check-in sequence)
-  - [PaymentRefund E2E sequence](#PaymentRefund E2E sequence)
+  - [PoS Payment E2E-sequence](#PoS-Payment-E2E-sequence)
+  - [Payment request before customer token check-in sequence](#Payment-request-before-customer-token-check-in-sequence)
+  - [Payment request after customer token check-in sequence](#Payment-request-after-customer-token-check-in-sequence)
+  - [PaymentRefund E2E sequence](#PaymentRefund-E2E-sequence)
 <!-- /TOC -->
 
 
