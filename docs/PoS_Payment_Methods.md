@@ -13,7 +13,7 @@
 <!-- /TOC -->
 
 
-## PaymentStart
+## <a name="PaymentStart">PaymentStart
 ### Purpose:
 This method is called when the Point of Sale (cash register / terminal) wishes to start a payment (The customer does not have to be checked-in in advance). 
 PaymentStart is only possible if no active MobilePay payment entity exists for current PoS – unless it is an update (Action=Update) for a payment entity in state "AwaitTokenRecalc".
@@ -161,7 +161,7 @@ HTTP 400 – See PaymentStart error codes
   </tr>
 </table>
 
-## GetPaymentStatus
+## <a name="GetPaymentStatus">GetPaymentStatus
 ### Purpose:
 Get a payment status for current PoS ID.
 Used for polling a payment status. Polling has to be done every 1 second until the PaymentStatus is 100 ('Done') or if it rejects the payment request (PaymentStatus 40 ('Cancel') or 50 ('Error')).
@@ -299,7 +299,7 @@ HTTP 400 – See GetPaymentStatus error codes
   </tr>
 </table>
 
-## PaymentCancel
+## <a name="PaymentCancel">PaymentCancel
 ### Purpose:
 Cancel payment request for current PoS ID.
 Cancel is principal possible as long as earlier request for payment hasn't been finalized (status 100).
@@ -374,7 +374,7 @@ HTTP 400 – See PaymentCancel error codes
   </tr>
 </table>
 
-## PaymentRefund
+## <a name="PaymentRefund">PaymentRefund
 ### Purpose:
 Refund part of or the entire amount of the payment.
 A payment refund can be made days/weeks after the original payment has been made.
@@ -490,15 +490,15 @@ HTTP 400 – See PaymentRefund error codes
   <tr>
 </table>
 
-## PoS Payment Polling Sequence
-### PoS Payment E2E-sequence
+## <a name="PoS-Payment-Polling-Sequence">PoS Payment Polling Sequence
+### <a name="PoS-Payment-E2E-sequence">PoS Payment E2E-sequence
 [![](assets/images/1_PoS_Payment_E2E-sequence.jpg)](assets/images/1_PoS_Payment_E2E-sequence.jpg)
 
-### Payment request before customer token check-in sequence
+### <a name="Payment-request-before-customer-token-check-in-sequence">Payment request before customer token check-in sequence
 [![](assets/images/2_Payment_request_before_customer_token_check-in_sequence.jpg)](assets/images/2_Payment_request_before_customer_token_check-in_sequence.jpg)
 
-### Payment request after customer token check-in sequence
+### <a name="Payment-request-after-customer-token-check-in-sequence">Payment request after customer token check-in sequence
 [![](assets/images/3_Payment_request_after_customer_token_check-in_sequence.jpg)](assets/images/3_Payment_request_after_customer_token_check-in_sequence.jpg)
 
-### PaymentRefund E2E sequence
+### <a name="Payment-Refund-E2E-sequence">PaymentRefund E2E sequence
 [![](assets/images/4_PaymentRefund_E2E_sequence..jpg)](assets/images/4_PaymentRefund_E2E_sequence..jpg)
