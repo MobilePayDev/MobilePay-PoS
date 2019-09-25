@@ -8,21 +8,3 @@ The API documentation is divieded into three categories: <br>
 <a href="PoS_Registration_Methods">PoS Registration Methods</a><br>
 <a href="PoS_Payment_Methods">PoS Payment Methods</a><br>
 <a href="PoS_Reservation_Methods">PoS Reservation Methods</a><br>
-
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-- [PoS administration](#PoS_Registration_Methods/RegisterPoS)
-    - [RegisterPoS](#RegisterPoS)
-    - [UpdateRegisteredPoSName](#UpdateRegisteredPoSName)
-    - [UnRegisterPoS](#UnRegisterPoS)
-- [PoSUnit administration](#AssignPoSUnitIdToPos)
-    - [AssignPoSUnitIdToPos](#AssignPoSUnitIdToPos)
-    - [UnAssignPoSUnitIdToPoS](#UnAssignPoSUnitIdToPoS)
-- [PoS/PoSUnit Support](#ReadPoSAssignPoSUnitId)
-    - [ReadPoSAssignPoSUnitId](#ReadPoSAssignPoSUnitId)
-    - [ReadPoSUnitAssignedPoSId](#ReadPoSUnitAssignedPoSId)
-    - [GetUniquePoSId](#GetUniquePoSId)
-    - [GetCurrentPayment](#GetCurrentPayment)
-    - [GetPosList](#GetPosList)
-- [Location Support](#ReadPoSAssignPoSUnitId)
-    - [GetLocationList](#GetLocationList)
-<!-- /TOC -->
