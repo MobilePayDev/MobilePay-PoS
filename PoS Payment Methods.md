@@ -53,11 +53,7 @@ The field is mandatory in the request even though it might be an empty string. |
 "Start": Initiate a payment.
 "Update": Update a current payment after recalculation. |
 |CustomerTokenCalc |String      | required | The field indicate if the loyalty payment flow must be initiated if applicable or not. “0”: Loyalty flow will be initiated if customer is a member of the merchant’s loyalty program. “1”: Ignore loyalty flow |
-|HMAC              |String      | required | The HMAC is calculated based on the other parameters. The key for the HMAC is a MerchantKey issued by MobilePay.
-Base64 (with padding) encoded HMAC SHA256:
-HMAC = Base64(hmacSha256(
-ISO88591Bytes(“{MerchantId+LocationId}#{PoSId}#{OrderId}#{Amount}#{BulkRef}#”), ISO88591Bytes(MerchantKey))) 
-Note that fields must be trimmed, see example [here](https://developer.mobilepay.dk/node/2546) |
+|HMAC              |String      | required | The HMAC is calculated based on the other parameters. The key for the HMAC is a MerchantKey issued by MobilePay. <br>Base64 (with padding) encoded HMAC SHA256:<br>HMAC = Base64(hmacSha256(<br>ISO88591Bytes(“{MerchantId+LocationId}#{PoSId}#{OrderId}#{Amount}#{BulkRef}#”), ISO88591Bytes(MerchantKey))) <br>Note that fields must be trimmed, see example [here](https://developer.mobilepay.dk/node/2546) |
 
 ### Response
 HTTP 200 – Ok
