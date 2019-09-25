@@ -1,18 +1,25 @@
-# MobilePay-PoS
-Our MobilePay PoS REST api  is intended for software developers implementing MobilePay payments in a PoS system
+# PoS Registration Methods: PoS -> MobilePay Backend
+The PoS Administration sequence must be completed before a MobilePay payment request can be issued by the PoS device. 
+This administration must be done either through Merchant Backend for all PoS devices or via the individual PoS device as needs arise depended on the PoS Vendor / Merchant Backend solution.
+The relation between Merchant Identifier, Location Identifier, PoS Identifier and PoSUnit Identifier must be held by Bank MobilePay Backend.
+
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-- [RegisterPoS](#RegisterPoS)
-- [UpdateRegisteredPoSName](#UpdateRegisteredPoSName)
-- [UnRegisterPoS](#UnRegisterPoS)
-- [AssignPoSUnitIdToPos](#AssignPoSUnitIdToPos)
-- [UnAssignPoSUnitIdToPoS](#UnAssignPoSUnitIdToPoS)
-- [ReadPoSAssignPoSUnitId](#ReadPoSAssignPoSUnitId)
-- [ReadPoSUnitAssignedPoSId](#ReadPoSUnitAssignedPoSId)
-- [GetUniquePoSId](#GetUniquePoSId)
-- [GetCurrentPayment](#GetCurrentPayment)
-- [GetPosList](#GetPosList)
-- [GetLocationList](#GetLocationList)
+- [PoS administration](#RegisterPoS)
+    - [RegisterPoS](#RegisterPoS)
+    - [UpdateRegisteredPoSName](#UpdateRegisteredPoSName)
+    - [UnRegisterPoS](#UnRegisterPoS)
+- [PoSUnit administration](#AssignPoSUnitIdToPos)
+    - [AssignPoSUnitIdToPos](#AssignPoSUnitIdToPos)
+    - [UnAssignPoSUnitIdToPoS](#UnAssignPoSUnitIdToPoS)
+- [PoS/PoSUnit Support](#ReadPoSAssignPoSUnitId)
+    - [ReadPoSAssignPoSUnitId](#ReadPoSAssignPoSUnitId)
+    - [ReadPoSUnitAssignedPoSId](#ReadPoSUnitAssignedPoSId)
+    - [GetUniquePoSId](#GetUniquePoSId)
+    - [GetCurrentPayment](#GetCurrentPayment)
+    - [GetPosList](#GetPosList)
+- [Location Support](#ReadPoSAssignPoSUnitId)
+    - [GetLocationList](#GetLocationList)
 <!-- /TOC -->
 
 
