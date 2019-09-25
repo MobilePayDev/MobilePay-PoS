@@ -1,1 +1,7 @@
+title: MobilePay Point of Sales
+base_url: https://mobilepaydev.github.io/MobilePay-PoS/
+description: MobilePay Point of Sales API documentation.
+show_downloads: false
 theme: jekyll-theme-minimal
+repository: MobilePayDev/MobilePay-PoS
+google_analytics: UA-92933803-2
