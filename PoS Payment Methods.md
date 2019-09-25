@@ -63,8 +63,7 @@ HTTP 200 – Ok
 ```
 |Parameter    |Type        |Description                                                      |
 |-------------|------------|-----------------------------------------------------------------|
-|ReCalc       |Integer      |0 – normal usage.
-1 – recalculation must be executed and payment updated.|
+|ReCalc       |Integer      |0 – normal usage.<br>1 – recalculation must be executed and payment updated.|
 |CustomerToken       |String      |null if no recalculation is needed yet. |
 |CustomerReceiptToken       |String      |Used for customer receipt token (In DK: Service agreement with Storebox implies that Storebox user Id is provided). May be null. Max 32 characters. |
 
