@@ -22,24 +22,6 @@ The relation between Merchant Identifier, Location Identifier, PoS Identifier an
     - [GetLocationList](#GetLocationList)
 <!-- /TOC -->
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-</table>
-
 ## <a name="RegisterPos"></a>RegisterPoS
 ### Purpose:
 Register a new Point of Sale terminal in the MobilePay PoS system. This must be done before PoSUnit ID is associated with a PoS.
@@ -54,6 +36,38 @@ Call used MerchantId and LocationId must be validated as known and related in ad
 "Name":"PoS Name"
 }
 ```
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td>The merchant identification number provided by MobilePay.</td>
+  </tr>
+  <tr>
+    <td>LocationId</td>
+    <td>String</td>
+    <td>required</td>
+    <td>Location ID related to current merchant ID provided by MobilePay.</td>
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>Optional</td>
+    <td>MobilePay system unique Point of Sale ID (cash register / terminal) – provided by either merchant (256 characters) or MobilePay PoS number generator (36 characters). If the request contains an empty PoSId value, the response will contain current auto-generated PoS assigned ID.<br> CASE SENTITIVE</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>String</td>
+    <td>required</td>
+    <td>PoS name to be shown in MobilePay App when the customer has checked-in. Example: “Cash register 1”</td>
+  </tr>
+</table>
 |Parameter    |Type        |Required  |Description                                                      |
 |-------------|------------|----------|-----------------------------------------------------------------|
 |MerchantId   |String      | required | The merchant identification number provided by MobilePay. |
