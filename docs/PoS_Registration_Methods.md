@@ -123,12 +123,38 @@ Call used MerchantId, LocationId and PoSId must be validated as known and relate
 }
 
 ```
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | Merchant ID related to current PoS ID. |
-|LocationId   |String      | required | Location ID related to current merchant ID and PoS ID. |
-|PoSId   |String        | required |Current Point of Sale ID (cash register/terminal) |
-|Name         |String      | required | Specified PoS name to be shown in MobilePay App when customer has checked-in |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Merchant ID related to current PoS ID. </td>
+  </tr>
+  <tr>
+    <td>LocationId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Location ID related to current merchant ID and PoS ID.</td>
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>Required</td>
+    <td>Current Point of Sale ID (cash register/terminal)</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>String</td>
+    <td>required</td>
+    <td>Specified PoS name to be shown in MobilePay App when customer has checked-in</td>
+  </tr>
+</table>
 
 ### Response
 HTTP 200 – Ok
@@ -145,9 +171,16 @@ HTTP 400 – See UpdateRegisteredPoSName error codes
 }
 ```
 ### UpdateRegisteredPoSName  Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. | 
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+</table>
 
 ## <a name="UnRegisterPoS"></a>UnRegisterPoS
 ### Purpose:
@@ -163,11 +196,32 @@ Call used MerchantId, LocationId and PoSId must be validated as known and relate
 
 }
 ```
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | Merchant ID related to current PoS ID. |
-|LocationId   |String      | required | Location ID related to current merchant ID and PoS ID. |
-|PoSId   |String        | required | Current Point of Sale ID (cash register / terminal)|
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Merchant ID related to current PoS ID. </td>
+  </tr>
+  <tr>
+    <td>LocationId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Location ID related to current merchant ID and PoS ID.</td>
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>Required</td>
+    <td>Current Point of Sale ID (cash register/terminal)</td>
+  </tr>
+</table>
 
 ### Response
 HTTP 200 – Ok
@@ -184,10 +238,20 @@ HTTP 400 – See UnRegisterPoS  error codes
 }
 ```
 ### RegisterPoS Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. | 
-|30           |The Key “MerchantId, LocationId and PoSId” does not exist. | 
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>The Key “MerchantId, LocationId and PoSId” does not exist. </td>
+  </tr>
+</table>
 
 ## <a name="AssignPoSUnitIdToPos"></a>AssignPoSUnitIdToPos
 ### Purpose:
@@ -211,12 +275,38 @@ If there is an existing payment for the PoS unit, this will be cancelled when As
 "PoSUnitId":"123456789012345"
 }
 ```
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | Merchant ID related to current PoS ID. |
-|LocationId   |String      | required | Location ID related to current merchant ID and PoS ID.|
-|PoSId   |String        | required | Current Point of Sale ID (cash register/terminal). |
-|PoSUnitId         |String      | required | Current PoSUnitId to be assigned |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Merchant ID related to current PoS ID. </td>
+  </tr>
+  <tr>
+    <td>LocationId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Location ID related to current merchant ID and PoS ID.</td>
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>Required</td>
+    <td>Current Point of Sale ID (cash register/terminal)</td>
+  </tr>
+  <tr>
+    <td>PoSUnitId</td>
+    <td>String</td>
+    <td>Required</td>
+    <td>Current PoSUnitId to be assigne</td>
+  </tr>
+</table>
 
 ### Response
 HTTP 200 – Ok
@@ -233,9 +323,16 @@ HTTP 400 – See AssignPoSUnitIdToPos error codes
 }
 ```
 ### AssignPoSUnitIdToPos Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. |
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+</table>
 
 ## <a name="UnAssignPoSUnitIdToPoS"></a>UnAssignPoSUnitIdToPoS
 ### Purpose:
@@ -252,12 +349,38 @@ Call used MerchantId, LocationId, PoSId and PoSUnitId must be validated as known
 "PoSUnitId":"123456789012345"
 }
 ```
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | Merchant ID related to current PoS ID. |
-|LocationId   |String      | required | Location ID related to current merchant ID and PoS ID.|
-|PoSId   |String        | required | Current Point of Sale ID (cash register/terminal). |
-|PoSUnitId         |String      | required | Current PoSUnitId to be unassigned |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Merchant ID related to current PoS ID. </td>
+  </tr>
+  <tr>
+    <td>LocationId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Location ID related to current merchant ID and PoS ID.</td>
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>Required</td>
+    <td>Current Point of Sale ID (cash register/terminal)</td>
+  </tr>
+  <tr>
+    <td>PoSUnitId</td>
+    <td>String</td>
+    <td>Required</td>
+    <td>Current PoSUnitId to be assigne</td>
+  </tr>
+</table>
 
 ### Response
 HTTP 200 – Ok
@@ -274,10 +397,20 @@ HTTP 400 – See UnAssignPoSUnitIdToPoS error codes
 }
 ```
 ### UnAssignPoSUnitIdToPoS Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. |
-|30           |The Key: MerchantId, LocationId, PoSId and PoSUnitId does not exist. | 
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>The Key “MerchantId, LocationId and PoSId” does not exist. </td>
+  </tr>
+</table>
 
 ## <a name="ReadPoSAssignPoSUnitId"></a>ReadPoSAssignPoSUnitId
 ### Purpose:
@@ -293,11 +426,32 @@ Call used MerchantId, LocationId and PoSId must be validated as known and relate
 "PoSId":"a123456-b123-c123-d123-e12345678901"
 }
 ```
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | Merchant ID related to current PoS ID. |
-|LocationId   |String      | required | Location ID related to current merchant ID and PoS ID.|
-|PoSId   |String        | required | Point of Sale ID (cash register / terminal) that is assigned to current PoSUnitId. |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Merchant ID related to current PoS ID. </td>
+  </tr>
+  <tr>
+    <td>LocationId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Location ID related to current merchant ID and PoS ID.</td>
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>Required</td>
+    <td>Point of Sale ID (cash register / terminal) that is assigned to current PoSUnitId.</td>
+  </tr>
+</table>
 
 ### Response
 HTTP 200 – Ok
@@ -306,9 +460,18 @@ HTTP 200 – Ok
 "PoSUnitId":"123456789012345"
 }
 ```
-|Parameter    |Type       |Description                                                      |
-|-------------|-----------|-----------------------------------------------------------------|
-|PoSUnitId   |String      | Current assigned PoSUnitId. Empty string if none assigned. |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>PoSUnitId</td>
+    <td>String</td>
+    <td>Current assigned PoSUnitId. Empty string if none assigned.</td>
+  </tr>
+</table>
 
 HTTP 400 – See ReadPoSAssignPoSUnitId error codes
 ```json
@@ -318,10 +481,20 @@ HTTP 400 – See ReadPoSAssignPoSUnitId error codes
 }
 ```
 ### ReadPoSAssignPoSUnitId Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. |
-|30           |The Key: MerchantId, LocationId and PoSId does not exist. | 
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>The Key “MerchantId, LocationId and PoSId” does not exist. </td>
+  </tr>
+</table>
 
 ## <a name="ReadPoSUnitAssignedPoSId"></a>ReadPoSUnitAssignedPoSId
 ### Purpose:
@@ -337,11 +510,32 @@ Call used MerchantId, LocationId and PoSUnitId must be validated as known and re
 "PoSUnitId":"123456789012345"
 }
 ```
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | Merchant ID related to current PoS ID. |
-|LocationId   |String      | required | Location ID related to current merchant ID and PoS ID.|
-|PoSUnitId         |String      | required | Current PoSUnitId |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Merchant ID related to current PoS ID. </td>
+  </tr>
+  <tr>
+    <td>LocationId</td>
+    <td>String</td>
+    <td>required</td>
+    <td> Location ID related to current merchant ID and PoS ID.</td>
+  </tr>
+  <tr>
+    <td>PoSUnitId</td>
+    <td>String</td>
+    <td>Required</td>
+    <td>Current PoSUnitId</td>
+  </tr>
+</table>
 
 ### Response
 HTTP 200 – Ok
@@ -350,9 +544,18 @@ HTTP 200 – Ok
 "PoSId":"a123456-b123-c123-d123-e12345678901"
 }
 ```
-|Parameter    |Type       |Description                                                      |
-|-------------|-----------|-----------------------------------------------------------------|
-|PoSId   |String      | Point of Sale ID (cash register / terminal) that is assigned to current PoSUnitId. |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>Point of Sale ID (cash register / terminal) that is assigned to current PoSUnitId. </td>
+  </tr>
+</table>
 
 HTTP 400 – See ReadPoSUnitAssignedPoSId error codes
 ```json
@@ -362,10 +565,20 @@ HTTP 400 – See ReadPoSUnitAssignedPoSId error codes
 }
 ```
 ### ReadPoSUnitAssignedPoSId Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. |
-|30           |The Key: MerchantId, LocationId and PoSUnitId does not exist. | 
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>The Key “MerchantId, LocationId and PoSId” does not exist. </td>
+  </tr>
+</table> 
 
 ## <a name="GetUniquePoSId"></a>GetUniquePoSId
 ### Purpose:
@@ -379,9 +592,20 @@ GUIDs are usually stored as 128-bit values, and are commonly displayed as 32 hex
 "MerchantId":"POSDK99999"
 }
 ```
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | Merchant ID must be known in the system. |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td>Merchant ID must be known in the system.</td>
+  </tr>
+</table>
 
 ### Response
 HTTP 200 – Ok
@@ -390,9 +614,18 @@ HTTP 200 – Ok
 "PoSId":"a123456-b123-c123-d123-e12345678901"
 }
 ```
-|Parameter    |Type       |Description                                                      |
-|-------------|-----------|-----------------------------------------------------------------|
-|PoSId   |String      | GUID – global unique ID to POS. |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>GUID – global unique ID to POS.</td>
+  </tr>
+</table>
 
 HTTP 400 – See GetUniquePoSId error codes
 ```json
@@ -402,10 +635,20 @@ HTTP 400 – See GetUniquePoSId error codes
 }
 ```
 ### GetUniquePoSId Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. |
-|20           |The Key: MerchantId does not exist. |
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>The Key: MerchantId does not exist. </td>
+  </tr>
+</table>
 
 ## <a name="GetCurrentPayment"></a>GetCurrentPayment
 ### Purpose:
@@ -419,11 +662,32 @@ Get the current payment transaction for the provided PoSId.
 "PoSId":" a123456-b123-c123-d123-e12345678901"
 }
 ```
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | Merchant ID |
-|LocationId   |String      | required | Location ID |
-|PoSId   |String        | required | PoSId |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td>Merchant ID</td>
+  </tr>
+  <tr>
+    <td>LocationId</td>
+    <td>String</td>
+    <td>required</td>
+    <td>Location ID</td>
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>Required</td>
+    <td>PoSId</td>
+  </tr>
+</table>
 
 ### Response
 HTTP 200 – Ok
@@ -441,18 +705,63 @@ HTTP 200 – Ok
   "LastestUpdate": "06-02-2017 09:30:39"
 }
 ```
-|Parameter           |Type       |Description                                                      |
-|--------------------|-----------|-----------------------------------------------------------------|
-|PoSId               |String     | Unique ID that identifies the PoS that has initiated current payment request. |
-|PoSUnitId           |String     | White Box/Terminal Id |
-|PaymentStatus       |Integer     | See GetPaymentStatus |
-|OrderId             |String     | The OrderId assigned to current payment. |
-|TransactionId       |String     | Unique ID that identifies the payment (transaction ID). ID is generated by Danske Bank and is shown on the receipt inside the MobilePay app. |
-|Amount              |Number     | The amount for the payment. Note: Decimal point is “.” |
-|CustomerId          |String     | Unique ID of the customer. The ID is generated by MobilePay.|
-|CustomerToken       |String     | Contains customer token if customer has checked-In with a merchant token ID related to this merchant’s loyalty program |
-|CustomerReceiptToken|String     | Used for customer receipt token (In DK: Service agreement with Storebox implies that Storebox user Id is provided) Max 32 char. |
-|LatestUpdate        |DateTime     | Datetime where the Payment were last updated / changed / accessed |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>Unique ID that identifies the PoS that has initiated current payment request.</td>
+  </tr>
+  <tr>
+    <td>PoSUnitId</td>
+    <td>String</td>
+    <td>White Box/Terminal Id</td>
+  </tr>
+  <tr>
+    <td>PaymentStatus</td>
+    <td>Integer</td>
+    <td>See GetPaymentStatus</td>
+  </tr>
+  <tr>
+    <td>OrderId</td>
+    <td>String</td>
+    <td>The OrderId assigned to current payment.</td>
+  </tr>
+  <tr>
+    <td>TransactionId</td>
+    <td>String</td>
+    <td>Unique ID that identifies the payment (transaction ID). ID is generated by MobilePay and is shown on the receipt inside the MobilePay app.</td>
+  </tr>
+  <tr>
+    <td>Amount</td>
+    <td>Number</td>
+    <td>The amount for the payment. Note: Decimal point is “.”</td>
+  </tr>
+  <tr>
+    <td>CustomerId</td>
+    <td>String</td>
+    <td>Unique ID of the customer. The ID is generated by MobilePay.</td>
+  </tr>
+  <tr>
+    <td>CustomerToken</td>
+    <td>String</td>
+    <td>Contains customer token if customer has checked-In with a merchant token ID related to this merchant’s loyalty program</td>
+  </tr>
+  <tr>
+    <td>CustomerReceiptToken</td>
+    <td>String</td>
+    <td>Used for customer receipt token (In DK: Service agreement with Storebox implies that Storebox user Id is provided) Max 32 char.</td>
+  </tr>
+  <tr>
+    <td>LatestUpdate</td>
+    <td>DateTime</td>
+    <td>Datetime where the Payment were last updated / changed / accessed</td>
+  </tr>
+</table>
 
 HTTP 400 – See GetCurrentPayment error codes
 ```json
@@ -462,9 +771,16 @@ HTTP 400 – See GetCurrentPayment error codes
 }
 ```
 ### GetCurrentPayment Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. |
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+</table>
 
 ## <a name="GetPosList"></a>GetPosList
 ### Purpose:
@@ -477,10 +793,26 @@ Get a list of the current PoSId’s registered to the Merchant/Location.
 "LocationId":"88888"
 }
 ```
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | Merchant ID. |
-|LocationId   |String      | required | Location ID.|
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td>Merchant ID</td>
+  </tr>
+  <tr>
+    <td>LocationId</td>
+    <td>String</td>
+    <td>required</td>
+    <td>Location ID</td>
+  </tr>
+</table>
 
 ### Response
 HTTP 200 – Ok
@@ -516,12 +848,33 @@ HTTP 200 – Ok
   ]
 }
 ```
-|Parameter           |Type       |Description                                                      |
-|--------------------|-----------|-----------------------------------------------------------------|
-|PoSId               |String     | GUID – global unique ID to POS |
-|Name                |String     | POS Name |
-|PosUnitId           |String     | White Box/Terminal Id |
-|Payment             |String     | See GetPaymentStatus for info. |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>Unique ID that identifies the PoS that has initiated current payment request.</td>
+  </tr>
+<tr>
+    <td>Name</td>
+    <td>String</td>
+    <td>POS Name</td>
+  </tr>
+  <tr>
+    <td>PoSUnitId</td>
+    <td>String</td>
+    <td>White Box/Terminal Id</td>
+  </tr>
+  <tr>
+    <td>Payment</td>
+    <td>Integer</td>
+    <td>See GetPaymentStatus</td>
+  </tr>
+</table>
 
 HTTP 400 – See GetPosList error codes
 ```json
@@ -531,9 +884,16 @@ HTTP 400 – See GetPosList error codes
 }
 ```
 ### GetPosList Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. |
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+</table>
 
 ## <a name="GetLocationList"></a>GetLocationList
 ### Purpose:
@@ -546,9 +906,20 @@ Can only be called from same merchant using the correct apikey.
 "MerchantId":"POSDK99999"
 }
 ```
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | Merchant ID. |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>MerchantId</td>
+    <td>String</td>
+    <td>required</td>
+    <td>Merchant ID</td>
+  </tr>
+</table>
 
 ### Response
 HTTP 200 – Ok
@@ -570,12 +941,33 @@ HTTP 200 – Ok
   ]
 }
 ```
-|Parameter           |Type       |Description                                                      |
-|--------------------|-----------|-----------------------------------------------------------------|
-|LocationId          |String     | LocationID |
-|Name                |String     | Location Name |
-|NotifyUrl           |String     | Link to merchant notification server |
-|NumberOfPos         |String     | Number of PointOfSale terminals registered to the Location. Use GetPosList to get the detailed POS information. |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>LocationId</td>
+    <td>String</td>
+    <td>LocationID</td>
+  </tr>
+<tr>
+    <td>Name</td>
+    <td>String</td>
+    <td>Location Name</td>
+  </tr>
+  <tr>
+    <td>NotifyUrl</td>
+    <td>String</td>
+    <td>Link to merchant notification server</td>
+  </tr>
+  <tr>
+    <td>NumberOfPos</td>
+    <td>Integer</td>
+    <td>Number of PointOfSale terminals registered to the Location. Use GetPosList to get the detailed POS information.</td>
+  </tr>
+</table>
 
 HTTP 400 – See GetLocationList error codes
 ```json
@@ -585,7 +977,14 @@ HTTP 400 – See GetLocationList error codes
 }
 ```
 ### GetLocationList Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. |
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+</table>
 
