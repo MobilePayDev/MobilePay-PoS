@@ -464,16 +464,13 @@ HTTP 400 – See PaymentRefund error codes
     <td>Order cannot be found (this order has not been paid by the customer, or it has been more than 3 months since the order has been paid)</td>
   </tr>
   <tr>
-  <tr>
     <td>2</td>
     <td>Amount is larger than remaining refundable amount on transaction </td>
   </tr>
   <tr>
-  <tr>
     <td>3</td>
     <td>Transaction is already refunded</td>
   </tr>
-  <tr>
   <tr>
     <td>10</td>
     <td>Missing or invalid parameters.</td>
