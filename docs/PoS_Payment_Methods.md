@@ -237,7 +237,7 @@ HTTP 200 – Ok
   <tr>
     <td>PaymentStatus</td>
     <td>Integer</td>
-    <td>See status values below <br>-<b>10 ('Idle')</b> No payment request in the queue<br>- <b>20 ('Issued')</b> - Payment request is sent to customer.<br>- <b>30 ('AwaitCheckIn')</b> - Await customer check-in.<br>- <b>40 ('Cancel')</b> - Customer has cancelled/rejected payment request.<br>- <b>50 ('Error')</b> - MobilePay is not able to handle the payment – the PoS should cancel the MobilePay payment request.<br>- <b>60 (‘AwaitTokenRecalc’)</b> – Await for PoS system to update payment after recalculation.<br>- <b>80 ('PaymentAccepted')</b> - The payment request is accepted by the customer – await payment confirmation from the payment transaction system.<br>- <b>100 ('Done')</b> - "Payment Confirmed" and TransactionId, PaymentSignature, Amount, CustomerId (optional) will contain a value.</td>
+    <td>See status values below <br>- <b>10 ('Idle')</b> No payment request in the queue<br>- <b>20 ('Issued')</b> - Payment request is sent to customer.<br>- <b>30 ('AwaitCheckIn')</b> - Await customer check-in.<br>- <b>40 ('Cancel')</b> - Customer has cancelled/rejected payment request.<br>- <b>50 ('Error')</b> - MobilePay is not able to handle the payment – the PoS should cancel the MobilePay payment request.<br>- <b>60 (‘AwaitTokenRecalc’)</b> – Await for PoS system to update payment after recalculation.<br>- <b>80 ('PaymentAccepted')</b> - The payment request is accepted by the customer – await payment confirmation from the payment transaction system.<br>- <b>100 ('Done')</b> - "Payment Confirmed" and TransactionId, PaymentSignature, Amount, CustomerId (optional) will contain a value.</td>
   </tr>
   <tr>
     <td>OrderId</td>
