@@ -24,7 +24,7 @@ It is expected that the PoS system keeps track of reservations internally in ord
 "OrderId":"123A124321",
 "Amount":"1023.43",
 "BulkRef":"MP Bulk Reference",
-“CaptureType”:”Full”
+"CaptureType”:”Full"
 }
 ```
 |Parameter    |Type        |Required  |Description                                                      |
