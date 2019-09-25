@@ -49,10 +49,10 @@ A PaymentStart will delete earlier finished payment entities – i.e., payment e
 |Amount            |String      | required | The amount for the payment. Always with 2 decimals and no thousand separators.Note: Decimal point is "." |
 |BulkRef           |String      | required | An option for grouping the payments – a text or ID. The field has a maximum length of 18 characters. If the field remains empty and the merchant does not have a Bulkpost agreement, the merchant will receive all mobile payments from any connected shops as individual postings in the reconciliation file. If the field remains empty and the merchant does have a Bulkpost agreement, the merchant will receive all mobile payments bulked with a default bulkref of the MP Enterprise Serialnumber value in the reconciliation file. It must be a merchant decision whether they want all individual postings or a bulk posting per store or the entire group as one posting.
 The field is mandatory in the request even though it might be an empty string. |
-|Action            |String      | required | Action values:
-"Start": Initiate a payment.
+|Action            |String      | required | Action values:<br>
+"Start": Initiate a payment.<br>
 "Update": Update a current payment after recalculation. |
-|CustomerTokenCalc |String      | required | The field indicate if the loyalty payment flow must be initiated if applicable or not. “0”: Loyalty flow will be initiated if customer is a member of the merchant’s loyalty program. “1”: Ignore loyalty flow |
+|CustomerTokenCalc |String      | required | The field indicate if the loyalty payment flow must be initiated if applicable or not. <br>“0”: Loyalty flow will be initiated if customer is a member of the merchant’s loyalty program. <br>“1”: Ignore loyalty flow |
 |HMAC              |String      | required | The HMAC is calculated based on the other parameters. The key for the HMAC is a MerchantKey issued by MobilePay. <br><br>Base64 (with padding) encoded HMAC SHA256:<br>HMAC = Base64(hmacSha256(<br>ISO88591Bytes(“{MerchantId+LocationId}#{PoSId}#{OrderId}#{Amount}#{BulkRef}#”), ISO88591Bytes(MerchantKey))) <br>Note that fields must be trimmed, see example [here](https://developer.mobilepay.dk/node/2546) |
 
 ### Response
