@@ -23,7 +23,7 @@ The relation between Merchant Identifier, Location Identifier, PoS Identifier an
 <!-- /TOC -->
 
 
-## RegisterPoS
+## <a name="RegisterPos"></a>RegisterPoS
 ### Purpose:
 Register a new Point of Sale terminal in the MobilePay PoS system. This must be done before PoSUnit ID is associated with a PoS.
 Data validation:
@@ -67,7 +67,7 @@ HTTP 400 – See RegisterPoS error codes
 |-------------|-----------------|
 |10           |Missing or invalid parameters. | 
 
-## UpdateRegisteredPoSName
+## <a name="UpdateRegisteredPoSName"></a>UpdateRegisteredPoSName
 ### Purpose:
 Update registered Point of Sale name in the MobilePay PoS system.
 Data validation:
@@ -108,7 +108,7 @@ HTTP 400 – See UpdateRegisteredPoSName error codes
 |-------------|-----------------|
 |10           |Missing or invalid parameters. | 
 
-## UnRegisterPoS
+## <a name="UnRegisterPoS"></a>UnRegisterPoS
 ### Purpose:
 Unregister current Point of Sale terminal ID in the MobilePay PoS system.
 Data validation:
@@ -148,7 +148,7 @@ HTTP 400 – See UnRegisterPoS  error codes
 |10           |Missing or invalid parameters. | 
 |30           |The Key “MerchantId, LocationId and PoSId” does not exist. | 
 
-## AssignPoSUnitIdToPos
+## <a name="AssignPoSUnitIdToPos"></a>AssignPoSUnitIdToPos
 ### Purpose:
 Assign a PoSUnit ID to current PoS (cash register / terminal) in the MobilePay PoS system.
 Data validation:
@@ -196,7 +196,7 @@ HTTP 400 – See AssignPoSUnitIdToPos error codes
 |-------------|-----------------|
 |10           |Missing or invalid parameters. |
 
-## UnAssignPoSUnitIdToPoS
+## <a name="UnAssignPoSUnitIdToPoS"></a>UnAssignPoSUnitIdToPoS
 ### Purpose:
 Unassign current PoSUnitId from current PoS cash register / terminal.
 Data validation:
@@ -238,7 +238,7 @@ HTTP 400 – See UnAssignPoSUnitIdToPoS error codes
 |10           |Missing or invalid parameters. |
 |30           |The Key: MerchantId, LocationId, PoSId and PoSUnitId does not exist. | 
 
-## ReadPoSAssignPoSUnitId
+## <a name="ReadPoSAssignPoSUnitId"></a>ReadPoSAssignPoSUnitId
 ### Purpose:
 Read PoSUnitId assigned to current PoS terminal.
 Data validation:
@@ -282,7 +282,7 @@ HTTP 400 – See ReadPoSAssignPoSUnitId error codes
 |10           |Missing or invalid parameters. |
 |30           |The Key: MerchantId, LocationId and PoSId does not exist. | 
 
-## ReadPoSUnitAssignedPoSId
+## <a name="ReadPoSUnitAssignedPoSId"></a>ReadPoSUnitAssignedPoSId
 ### Purpose:
 Read PoS (cash register / terminal) ID that is assigned to current PoSUnitId
 Data validation:
@@ -326,7 +326,7 @@ HTTP 400 – See ReadPoSUnitAssignedPoSId error codes
 |10           |Missing or invalid parameters. |
 |30           |The Key: MerchantId, LocationId and PoSUnitId does not exist. | 
 
-## GetUniquePoSId
+## <a name="GetUniquePoSId"></a>GetUniquePoSId
 ### Purpose:
 Get a global unique PoSId to use for registering a new PoS in MobilePay Backend system.
 A Globally Unique IDentifier (GUID) is a unique reference number used as an identifier in computer software. The term GUID typically refers to various implementations of the universally unique identifier (UUID) standard.
@@ -366,7 +366,7 @@ HTTP 400 – See GetUniquePoSId error codes
 |10           |Missing or invalid parameters. |
 |20           |The Key: MerchantId does not exist. |
 
-## GetCurrentPayment
+## <a name="GetCurrentPayment"></a>GetCurrentPayment
 ### Purpose:
 Get the current payment transaction for the provided PoSId.
 
@@ -425,7 +425,7 @@ HTTP 400 – See GetCurrentPayment error codes
 |-------------|-----------------|
 |10           |Missing or invalid parameters. |
 
-## GetPosList
+## <a name="GetPosList"></a>GetPosList
 ### Purpose:
 Get a list of the current PoSId’s registered to the Merchant/Location.
 
@@ -494,7 +494,7 @@ HTTP 400 – See GetPosList error codes
 |-------------|-----------------|
 |10           |Missing or invalid parameters. |
 
-## GetLocationList
+## <a name="GetLocationList"></a>GetLocationList
 ### Purpose:
 Get a list of locations registered to a MerchantId. 
 Can only be called from same merchant using the correct apikey.
