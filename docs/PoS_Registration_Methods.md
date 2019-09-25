@@ -18,7 +18,7 @@ The relation between Merchant Identifier, Location Identifier, PoS Identifier an
     - [GetUniquePoSId](#GetUniquePoSId)
     - [GetCurrentPayment](#GetCurrentPayment)
     - [GetPosList](#GetPosList)
-- [Location Support](#ReadPoSAssignPoSUnitId)
+- [Location Support](#GetLocationList)
     - [GetLocationList](#GetLocationList)
 <!-- /TOC -->
 
