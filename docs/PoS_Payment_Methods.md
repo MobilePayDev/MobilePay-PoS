@@ -227,4 +227,4 @@ HTTP 400 – See PaymentRefund error codes
 |99           |Technical error (refund cannot be performed) |
 
 
-[![](6.5.1 PoS Payment E2E-sequence.jpg)
+[![](assets/images/6.5.1 PoS Payment E2E-sequence.jpg)](assets/images/6.5.1 PoS Payment E2E-sequence.jpg)
