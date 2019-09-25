@@ -141,3 +141,98 @@ HTTP 400 – See GetPaymentStatus error codes
 |Error code   |Error text       |
 |-------------|-----------------|
 |10           |Missing or invalid parameters. |
+|30           |The key "MerchantId, LocationId and PoSId" does not exist. |
+
+## PaymentCancel
+### Purpose:
+Cancel payment request for current PoS ID.
+Cancel is principal possible as long as earlier request for payment hasn't been finalized (status 100).
+A PaymentCancel will delete current payment entity active or not unless earlier finished payment ended in status Done (status code 100) which will remains until a new payment starts.
+
+### Request:
+```json
+{
+"MerchantId":"POSDK99999",
+"LocationId":"88888",
+"PoSId":"a123456-b123-c123-d123-e12345678901"
+}
+```
+|Parameter    |Type        |Required  |Description                                                      |
+|-------------|------------|----------|-----------------------------------------------------------------|
+|MerchantId   |String      | required | Merchant ID related to current PoS ID. |
+|LocationId   |String      | required | Location ID related to current merchant ID and PoS ID.|
+|PoSId        |String      | required | Current Point of Sale ID (cash register/terminal). |
+
+### Response
+HTTP 200 – Ok
+```json
+{
+}
+```
+
+HTTP 400 – See PaymentCancel error codes
+```json
+{
+"StatusCode":10,
+"StatusText":"Missing or invalid parameters"
+}
+```
+### PaymentCancel Error Codes
+|Error code   |Error text       |
+|-------------|-----------------|
+|10           |Missing or invalid parameters. |
+|30           |The key "MerchantId, LocationId and PoSId" does not exist. |
+|50           |Action not possible. |
+
+## PaymentRefund
+### Purpose:
+Refund part of or the entire amount of the payment.
+A payment refund can be made days/weeks after the original payment has been made.
+"PaymentRefund" is a stand-alone method and must be called directly. The response code from this call will indicate success or failure. 
+The "OrderId" value must be entered from either PoS or merchant backend.
+
+### Request:
+```json
+{
+"MerchantId":"POSDK99999",
+"LocationId":"88888",
+"PoSId":"a123456-b123-c123-d123-e12345678901",
+ "OrderId":"123A124321",
+"Amount":"100.00",
+"BulkRef":""
+}
+```
+|Parameter    |Type        |Required  |Description                                                      |
+|-------------|------------|----------|-----------------------------------------------------------------|
+|MerchantId   |String      | required | Id of the merchant. |
+|LocationId   |String      | required | Location ID related to current merchant ID and PoS ID.|
+|PoSId        |String      | required | Current Point of Sale ID (cash register / terminal). |
+|OrderId      |String      | required | Order ID that identifies the payment to refund. |
+|Amount       |String      | required | Amount to refund. <br>If  0.00 or blank, the whole transaction will be refunded.<br>Note: Decimal point is “.”<br>Examples: "Amount": "0.00"  -  "Amount": "100.00" |
+|BulkRef      |String      | required | Note: this parameter is required but currently only a placeholder for future use. For now, passed values will not be used, but we recommend preparing your solution for this feature. We expect to implement this in an upcoming update of the API.<br> An option for grouping the refunds – a text or ID. The field has a maximum length of 18 characters.<br> If the field remains empty and the merchant does not have a Bulkpost agreement, the merchant will receive all mobile refunds from any connected shops as individual postings in the reconciliation file.<br> If the field remains empty and the merchant does have a Bulkpost agreement, the merchant will receive all mobile refunds bulked with a default BulkRef of the MP Enterprise Serialnumber value in the reconciliation file.<br> It must be a merchant decision whether they want all individual postings or an bulk posting per store or the entire group as one posting.|
+
+### Response
+HTTP 200 – Ok
+```json
+{
+"Remainder":10.75,
+"TransactionId":"1122334455A"
+}
+```
+
+HTTP 400 – See PaymentRefund error codes
+```json
+{
+"StatusCode":10,
+"StatusText":"Missing or invalid parameters"
+}
+```
+### PaymentRefund Error Codes
+|Error code   |Error text       |
+|-------------|-----------------|
+|1            |Order cannot be found (this order has not been paid by the customer, or it has been more than 3 months since the order has been paid) |
+|2            |Amount is larger than remaining refundable amount on transaction |
+|3            |Transaction is already refunded |
+|10           |Missing or invalid parameters |
+|30           |The key "MerchantId, LocationId and PoSId" does not exist |
+|99           |Technical error (refund cannot be performed) |
