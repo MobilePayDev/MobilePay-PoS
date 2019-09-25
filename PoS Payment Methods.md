@@ -1,21 +1,10 @@
 # PoS Payment Methods: PoS -> MobilePay Backend
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-- [PoS administration](#RegisterPoS)
-    - [RegisterPoS](#RegisterPoS)
-    - [UpdateRegisteredPoSName](#UpdateRegisteredPoSName)
-    - [UnRegisterPoS](#UnRegisterPoS)
-- [PoSUnit administration](#AssignPoSUnitIdToPos)
-    - [AssignPoSUnitIdToPos](#AssignPoSUnitIdToPos)
-    - [UnAssignPoSUnitIdToPoS](#UnAssignPoSUnitIdToPoS)
-- [PoS/PoSUnit Support](#ReadPoSAssignPoSUnitId)
-    - [ReadPoSAssignPoSUnitId](#ReadPoSAssignPoSUnitId)
-    - [ReadPoSUnitAssignedPoSId](#ReadPoSUnitAssignedPoSId)
-    - [GetUniquePoSId](#GetUniquePoSId)
-    - [GetCurrentPayment](#GetCurrentPayment)
-    - [GetPosList](#GetPosList)
-- [Location Support](#ReadPoSAssignPoSUnitId)
-    - [GetLocationList](#GetLocationList)
+- [PaymentStart](#PaymentStart)
+- [GetPaymentStatus](#GetPaymentStatus)
+- [PaymentCancel](#PaymentCancel)
+- [PaymentRefund](#PaymentRefund)
 <!-- /TOC -->
 
 
