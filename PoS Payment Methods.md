@@ -225,3 +225,6 @@ HTTP 400 – See PaymentRefund error codes
 |10           |Missing or invalid parameters |
 |30           |The key "MerchantId, LocationId and PoSId" does not exist |
 |99           |Technical error (refund cannot be performed) |
+
+
+[![](6.5.1 PoS Payment E2E-sequence.jpg)
