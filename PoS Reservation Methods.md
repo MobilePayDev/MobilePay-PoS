@@ -1,4 +1,4 @@
-# 7	PoS Reservation Methods: PoS -> MobilePay Backend
+# PoS Reservation Methods: PoS -> MobilePay Backend
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 - [ReservationStart](#ReservationStart)
