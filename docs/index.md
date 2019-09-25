@@ -6,6 +6,6 @@ For information about the PoS product and details on Getting started, Test and C
 
 The API documentation is divieded into three categories: <br>
 <a href="PoS_Registration_Methods">PoS Registration Methods</a><br>
--<a href="PoS_Registration_Methods/RegisterPos">RegisterPos</a><br>
+-<a href="PoS_Registration_Methods#RegisterPos">RegisterPos</a><br>
 <a href="PoS_Payment_Methods">PoS Payment Methods</a><br>
 <a href="PoS_Reservation_Methods">PoS Reservation Methods</a><br>
