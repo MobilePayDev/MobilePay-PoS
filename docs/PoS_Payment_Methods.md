@@ -226,5 +226,15 @@ HTTP 400 – See PaymentRefund error codes
 |30           |The key "MerchantId, LocationId and PoSId" does not exist |
 |99           |Technical error (refund cannot be performed) |
 
-
+## PoS Payment Polling Sequence
+### PoS Payment E2E-sequence
 [![](assets/images/1_PoS_Payment_E2E-sequence.jpg)](assets/images/1_PoS_Payment_E2E-sequence.jpg)
+
+### Payment request before customer token check-in sequence
+[![](assets/images/2_Payment_request_before_customer_token_check-in_sequence.jpg)](assets/images/2_Payment_request_before_customer_token_check-in_sequence.jpg)
+
+### Payment request after customer token check-in sequence
+[![](assets/images/3_Payment_request_after_customer_token_check-in_sequence.jpg)](assets/images/3_Payment_request_after_customer_token_check-in_sequence.jpg)
+
+### PaymentRefund E2E sequence
+[![](assets/images/4_PaymentRefund_E2E_sequence..jpg)](assets/images/4_PaymentRefund_E2E_sequence..jpg)
