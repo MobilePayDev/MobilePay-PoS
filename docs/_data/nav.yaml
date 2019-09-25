@@ -1,0 +1,27 @@
+overview_title: Overview
+overview_url: "index"
+
+PoS_Registration_Methods_title: PoS Registration Methods
+PoS_Registration_Methods_url: "PoS_Registration_Methods"
+- title: RegisterPoS
+  url: "PoS_Registration_Methods#RegisterPoS"
+- title: UpdateRegisteredPoSName
+  url: "PoS_Registration_Methods#UpdateRegisteredPoSName"
+  - title: UnRegisterPoS
+  url: "PoS_Registration_Methods#UnRegisterPoS"
+  - title: AssignPoSUnitIdToPos
+  url: "PoS_Registration_Methods#AssignPoSUnitIdToPos"
+  - title: UnAssignPoSUnitIdToPoS
+  url: "PoS_Registration_Methods#UnAssignPoSUnitIdToPoS"
+  - title: ReadPoSAssignPoSUnitId
+  url: "PoS_Registration_Methods#ReadPoSAssignPoSUnitId"
+  - title: ReadPoSUnitAssignedPoSId
+  url: "PoS_Registration_Methods#ReadPoSUnitAssignedPoSId"
+  - title: GetUniquePoSId
+  url: "PoS_Registration_Methods#GetUniquePoSId"
+  - title: GetCurrentPayment
+  url: "PoS_Registration_Methods#GetCurrentPayment"
+    - title: GetPosList
+  url: "PoS_Registration_Methods#GetPosList"
+  - title: GetLocationList
+  url: "PoS_Registration_Methods#GetLocationList"
