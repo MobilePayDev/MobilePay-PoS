@@ -68,12 +68,6 @@ Call used MerchantId and LocationId must be validated as known and related in ad
     <td>PoS name to be shown in MobilePay App when the customer has checked-in. Example: “Cash register 1”</td>
   </tr>
 </table>
-|Parameter    |Type        |Required  |Description                                                      |
-|-------------|------------|----------|-----------------------------------------------------------------|
-|MerchantId   |String      | required | The merchant identification number provided by MobilePay. |
-|LocationId   |String      | required | Location ID related to current merchant ID provided by MobilePay. |
-|PoSId   |String        | optional | MobilePay system unique Point of Sale ID (cash register / terminal) – provided by either merchant (256 characters) or MobilePay PoS number generator (36 characters). If the request contains an empty PoSId value, the response will contain current auto-generated PoS assigned ID. CASE SENTITIVE |
-|Name         |String      | required | PoS name to be shown in MobilePay App when the customer has checked-in. Example: “Cash register 1” |
 
 ### Response
 HTTP 200 – Ok
@@ -82,9 +76,18 @@ HTTP 200 – Ok
 "PoSId":"a123456-b123-c123-d123-e12345678901"
 }
 ```
-|Parameter    |Type        |Description                                                      |
-|-------------|------------|-----------------------------------------------------------------|
-|PoSId        |String      | MobilePay system unique PoS ID  – either the PoSId value contained in the RegisterPoS request or supplied by merchant. |
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>	
+  </tr>
+  <tr>
+    <td>PoSId</td>
+    <td>String</td>
+    <td>MobilePay system unique PoS ID  – either the PoSId value contained in the RegisterPoS request or supplied by merchant.</td>
+  </tr>
+</table>
 
 HTTP 400 – See RegisterPoS error codes
 ```json
@@ -94,9 +97,16 @@ HTTP 400 – See RegisterPoS error codes
 }
 ```
 ### RegisterPoS Error Codes
-|Error code   |Error text       |
-|-------------|-----------------|
-|10           |Missing or invalid parameters. | 
+<table>
+  <tr>
+    <th>Error code</th>
+    <th>Error text</th>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Missing or invalid parameters.</td>
+  </tr>
+</table>
 
 ## <a name="UpdateRegisteredPoSName"></a>UpdateRegisteredPoSName
 ### Purpose:
