@@ -8,7 +8,7 @@
 - [ReservationCapture](#ReservationCapture)
 <!-- /TOC -->
 
-## ReservationStart
+## <a name="ReservationStart"></a>ReservationStart
 ### Purpose:
 This method is called when the Point of Sale (cash register / terminal) wishes to start a reservation (The customer does not have to be checked-in in advance). 
 ReservationStart is only possible if no active MobilePay reservation entity exists for current PoS.
@@ -128,7 +128,7 @@ HTTP 400 – See ReservationStart error codes
   </tr>
 </table>
 
-## GetReservationStatus
+## <a name="GetReservationStatus"></a>GetReservationStatus
 ### Purpose:
 Get a Reservation status for current PoS ID.
 Used for polling for status. Polling has to be done every 1 second until the ReservationStatus is 100 ('Done') or if the reservation request has been rejected (ReservationStatus 40 ('Cancel') or 50 ('Error')).
@@ -263,7 +263,7 @@ HTTP 400 – See GetReservationStatus error codes
   </tr>
 </table>
 
-## ReservationCancel
+## <a name="ReservationCancel"></a>ReservationCancel
 ### Purpose:
 Cancel Reservation request for current PoS ID.
 Cancel is principal possible as long as earlier request for reservation hasn't been finalized.
@@ -344,7 +344,7 @@ HTTP 400 – See ReservationCancel error codes
   </tr>
 </table>
 
-## GetCurrentReservation
+## <a name="GetCurrentReservation"></a>GetCurrentReservation
 ### Purpose:
 Get Information about the current reservation. 
 
@@ -408,7 +408,7 @@ HTTP 400 – See GetCurrentReservation error codes
 }
 ```
 
-## ReservationCapture
+## <a name="ReservationCapture"></a>ReservationCapture
 ### Purpose:
 This method is called when the Point of Sale (cash register / terminal) wishes to Capture the Reservation
 ReservationCapture is only possible when a Reservation exists with the provided order ID. Reservations made as Full Capture reservations should always be captured with 0.00 in amount, and Partial Capture with the amount to capture
