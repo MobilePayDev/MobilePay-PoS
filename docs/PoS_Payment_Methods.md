@@ -487,7 +487,6 @@ HTTP 400 – See PaymentRefund error codes
     <td>99</td>
     <td>Technical error (refund cannot be performed) </td>
   </tr>
-  <tr>
 </table>
 
 ## <a name="PoS-Payment-Polling-Sequence">PoS Payment Polling Sequence
