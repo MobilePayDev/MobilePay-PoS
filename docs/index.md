@@ -17,13 +17,13 @@ The API documentation is divieded into three categories: <br>
 <li><a href="PoS_Registration_Methods#GetCurrentPayment">GetCurrentPayment</a></li>
 <li><a href="PoS_Registration_Methods#GetPosList">GetPosList</a></li>
 <li><a href="PoS_Registration_Methods#GetLocationList">GetLocationList</a></li></ul>
-
+<br>
 <b><a href="PoS_Payment_Methods">PoS Payment Methods</a></b>
 <ul><li><a href="PoS_Payment_Methods#PaymentStart">PaymentStart</a></li>
 <li><a href="PoS_Payment_Methods#GetPaymentStatus">GetPaymentStatus</a></li>
 <li><a href="PoS_Payment_Methods#PaymentCancel">PaymentCancel</a></li>
 <li><a href="PoS_Payment_Methods#PaymentRefund">PaymentRefund</a></li></ul>
-
+<br>
 <b><a href="PoS_Reservation_Methods">PoS Reservation Methods</a></b>
 <ul><li><a href="PoS_Reservation_Methods#ReservationStart">ReservationStart</a></li>
 <li><a href="PoS_Reservation_Methods#GetReservationStatus">GetReservationStatus</a></li>
