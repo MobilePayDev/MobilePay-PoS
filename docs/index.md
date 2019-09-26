@@ -30,3 +30,9 @@ The API documentation is divieded into three categories: <br>
 -<a href="PoS_Reservation_Methods#ReservationCancel">ReservationCancel</a><br>
 -<a href="PoS_Reservation_Methods#GetCurrentReservation">GetCurrentReservation</a><br>
 -<a href="PoS_Reservation_Methods#ReservationCapture">ReservationCapture</a><br>
+-<a href="PoS_Reservation_Methods#PoS-Payment-Polling-Sequence">PoS Payment Polling Sequence</a><br>
+--<a href="PoS_Reservation_Methods#PoS-Payment-E2E-sequence">PoS Payment E2E-sequence</a><br>
+--<a href="PoS_Reservation_Methods#Payment-request-before-customer-token-check-in-sequence">Payment request before customer token check-in sequence</a><br>
+--<a href="PoS_Reservation_Methods#Payment-request-after-customer-token-check-in-sequence">Payment request after customer token check-in sequence</a><br>
+--<a href="PoS_Reservation_Methods#Payment-Refund-E2E-sequence">Payment Refund E2E-sequence</a><br>
+
