@@ -475,20 +475,6 @@ HTTP 200 – Ok
 {
 }
 ```
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Description</th>	
-  </tr>
-  <tr>
-    <td>CustomerReceiptToken</td>
-    <td>String</td>
-    <td>Used for customer receipt token (In DK: Service agreement with Storebox implies that Storebox user Id is provided).<br>May be null.<br>Max 32 characters.</td>
-  </tr>
-</table>
-
-
 
 HTTP 400 – See ReservationCapture error codes
 ```json
