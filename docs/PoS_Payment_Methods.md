@@ -63,7 +63,7 @@ A PaymentStart will delete earlier finished payment entities – i.e., payment e
     <td>OrderId</td>
     <td>String</td>
     <td>required</td>
-    <td>The OrderId is a unique id that identifies the payment. The OrderId is issued by the merchant and is attached to the payment inside MobilePay system. <br>The order ID must be unique for the merchant/location combination. This means that there should be only one completed payment with any given order ID for the same merchant and location (store) during the lifetime of the merchant/location. <br>CASE SENTITIVE </td>
+    <td>The OrderId is a unique id that identifies the payment. The OrderId is issued by the merchant and is attached to the payment inside MobilePay system. <br>The order ID must be unique for the merchant/location combination. This means that there should be only one completed payment with any given order ID for the same merchant and location (store) during the lifetime of the merchant/location. Max 32 characters <br>CASE SENTITIVE </td>
   </tr>
   <tr>
     <td>Amount</td>
